@@ -51,6 +51,7 @@
 
  ![image](https://github.com/user-attachments/assets/c8b6e2c8-cd02-4ff1-99bc-2c0bc5bfff81)
 تصویر هشتم – ورود به برنامه
+
 زمانیکه ورود با موفقیت انجام شود به صفحه گروه های من، هدایت می شویم
 
 
