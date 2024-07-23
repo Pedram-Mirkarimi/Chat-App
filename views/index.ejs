@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title><%= pageTitle %></title>
+  </head>
+  <body>
+    <div class="centered-form">
+      <div class="centered-form__box">
+        <h1>ورود</h1>
+        <form action="/group" id="loginForm">
+          <label>ایمیل</label>
+          <input id="email" type="email" name="email" placeholder="ایمیل" />
+          <label>کلمه عبور</label>
+          <input id="password" type="password" name="password" placeholder="کلمه عبور" autocomplete="off" />
+          <input type="checkbox" onclick="showPw()" id="show-pass" /><span id="show-pw">کلمه عبور نشان داده شود</span>
+          <button>ورود</button>
+          <p>میخوای ثبت نام کنی؟ <a href="/register">اینجا کلیک کن</a></p>
+        </form>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/common.js"></script>
+  </body>
+</html>

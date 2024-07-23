@@ -1,0 +1,255 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.4;
+  color: #333333;
+  font-family: 'BNazanin', Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'BNazanin';
+  src: url('../fonts/IRNazanin.ttf');
+}
+
+@font-face {
+  font-family: 'BNazanin-Bold';
+  src: url('../fonts/IRNazaninBold.ttf');
+}
+
+h1 {
+  margin-bottom: 16px;
+  color: #7c5cbf;
+  text-shadow: 2px 2px 4px #7b5cbfce;
+}
+
+label {
+  font-family: 'BNazanin-Bold', Arial, Helvetica, sans-serif;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #777;
+}
+
+input {
+  font-family: 'BNazanin', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  border: 1px solid #eeeeee;
+  padding: 12px;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 12px;
+  background: #7c5cbf;
+  border: none;
+  color: white;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  outline: none;
+}
+
+button:hover {
+  background: #6b47b8;
+}
+
+button:disabled {
+  cursor: default;
+  background: #7c5cbf94;
+}
+
+/* Group Page Styles */
+.group-form {
+  background: #333744;
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.group-form__box {
+  box-shadow: 0px 0px 17px 1px #1d1f26;
+  background: #ddd;
+  width: 60%;
+  margin-top: 2em;
+  padding: 10px 15px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-form__box h2 {
+  color: #333744;
+}
+
+.newGroup-form {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.newGroup-form input {
+  width: 74%;
+  font-weight: bolder;
+  border-radius: 50px;
+}
+
+.newGroup-form button {
+  width: 24%;
+  border-radius: 50px;
+}
+
+.groupJoin-form {
+  background: #333744;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.groupJoinForm__box {
+  box-shadow: 0px 0px 17px 1px #1d1f26;
+  background: #ddd;
+  width: 90%;
+  height: 100%;
+  padding: 10px 15px;
+  margin-top: -.5em;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.groupJoinForm__box h2 {
+  color: #333744;
+}
+
+.joinGroup-form {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.joinGroup-form input {
+  width: 74%;
+  font-weight: bolder;
+  border-radius: 50px;
+}
+
+.joinGroup-form button {
+  width: 24%;
+  border-radius: 50px;
+}
+
+.mygroup-form {
+  background: #333744;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mygroup__box {
+  box-shadow: 0px 0px 17px 1px #1d1f26;
+  background: #ddd;
+  width: 90%;
+  height: 100%;
+  padding: 10px 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mygroup__box h2 {
+  color: #333744;
+}
+
+.groupName-form {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.groupName-form input {
+  width: 74%;
+  font-weight: bolder;
+  border-radius: 50px;
+}
+
+.groupName-form button {
+  width: 24%;
+  border-radius: 50px;
+}
+
+.groupList {
+  background: #333744;
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.groupList__box {
+  background: #f7f7fa;
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.justMargin {
+  margin-top: -.5em;
+}
+
+.group-box {
+  background: #333; 
+  width: 33%;
+  padding: 10px;
+  border-radius: 50px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.groups {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  font-size: 18px;
+}
+
+.group-box li {
+  color: #f7f7fa;
+}
+
+.group-box button {
+  border-radius: 50px;
+}

@@ -1,0 +1,356 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.4;
+  color: #333333;
+  font-family: 'BNazanin', Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'BNazanin';
+  src: url('../fonts/IRNazanin.ttf');
+}
+
+@font-face {
+  font-family: 'BNazanin-Bold';
+  src: url('../fonts/IRNazaninBold.ttf');
+}
+
+h1 {
+  margin-bottom: 16px;
+  color: #7c5cbf;
+  text-shadow: 2px 2px 4px #7b5cbfce;
+}
+
+label {
+  font-family: 'BNazanin-Bold', Arial, Helvetica, sans-serif;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #777;
+}
+
+input {
+  font-family: 'BNazanin', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  border: 1px solid #eeeeee;
+  padding: 12px;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 12px;
+  background: #7c5cbf;
+  border: none;
+  color: white;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  outline: none;
+}
+
+button:hover {
+  background: #6b47b8;
+}
+
+button:disabled {
+  cursor: default;
+  background: #7c5cbf94;
+}
+
+/* Login & Register Page Styles */
+.centered-form {
+  background: #333744;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-form__box {
+  box-shadow: 0px 0px 17px 1px #1d1f26;
+  background: #f7f7fa;
+  padding: 24px;
+  width: 300px;
+}
+
+.centered-form button {
+  margin-top: 24px;
+  width: 100%;
+  font-size: large;
+  border-radius: 50px;
+}
+
+.centered-form input {
+  font-family: 'BNazanin', Arial, Helvetica, sans-serif;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.centered-form label {
+  font-size: medium;
+}
+
+.centered-form p {
+  width: 100%;
+  margin-top: 16px;
+}
+.centered-form p a {
+  text-decoration: none;
+  color: #1d1f26;
+}
+
+#password,
+#email,
+#username,
+#group {
+  width: 100%;
+  border-radius: 50px;
+}
+
+#show-pw {
+  font-size: 16px;
+  color: #777;
+  margin-right: 5px;
+}
+
+#show-pass {
+  width: 14px;
+  height: 14px;
+  margin-top: 8px;
+}
+
+/* Chat Page Layout */
+.chat {
+  display: flex;
+}
+
+.chat__sidebar {
+  height: 100vh;
+  color: white;
+  background: #333744;
+  width: 250px;
+  overflow-y: scroll;
+}
+
+.adminName {
+  margin-right: 0.3em;
+}
+
+/* Chat styles */
+.chat__main {
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.chat__messages {
+  flex-grow: 3;
+  padding: 24px 24px 0 24px;
+  overflow-y: scroll;
+}
+
+/* Message Styles */
+.message {
+  margin-bottom: 16px;
+  font-size: 18px;
+  position: relative;
+  word-break: break-all;
+}
+
+.message__name {
+  font-family: 'BNazanin-Bold', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.message__meta {
+  font-family: 'BNazanin-Bold', Arial, Helvetica, sans-serif;
+  color: #777;
+  font-size: 18px;
+  float: left;
+}
+
+.message a {
+  font-family: 'BNazanin', Arial, Helvetica, sans-serif;
+  color: #333744;
+  text-decoration: none;
+  padding: 0 10px;
+  border-bottom: 1px ridge rgba(76, 5, 158, 0.589);
+  border-radius: 5px;
+}
+
+/* Header Bar */
+.header {
+  display: flex;
+  padding: 2px 5px;
+  background-color: #333744;
+}
+
+.header__welcome {
+  display: block;
+  margin: 0 auto;
+  color: #f7f7fa;
+}
+
+.clock {
+  font-family: 'BNazanin', Arial, Helvetica, sans-serif;
+  display: block;
+  color: #f7f7fa;
+  font-size: larger;
+  margin-left: 10px;
+}
+
+.date {
+  font-family: 'BNazanin', Arial, Helvetica, sans-serif;
+  display: block;
+  color: #f7f7fa;
+  font-size: larger;
+  margin-right: 5px;
+}
+
+.clockLbl {
+  color: #f7f7fa;
+  margin: 0 0 0 5px;
+}
+
+.dateLbl {
+  color: #f7f7fa;
+  margin: 0 5px 0 0;
+}
+
+/* Message Composition Styles */
+.compose {
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 16px;
+  padding: 24px;
+}
+
+.compose form {
+  display: flex;
+  flex-grow: 1;
+  margin-left: 8px;
+}
+
+.compose input {
+  font-family: 'BNazanin-Bold', Arial, Helvetica, sans-serif;
+  border: 1px solid #777;
+  width: 100%;
+  padding: 12px;
+  margin: 0 0 0 16px;
+  flex-grow: 1;
+  border-radius: 50px;
+  color: #262d44;
+}
+
+.compose button {
+  display: flex;
+  font-family: 'BNazanin-Bold', Arial, Helvetica, sans-serif;
+  font-size: medium;
+  border-radius: 50px;
+}
+
+.back {
+  border-radius: 50px;
+  margin-right: 16px;
+  background-color: #333744;
+  border: 1px solid #333744;
+}
+
+.back:hover {
+  background-color: #fff;
+  color: #333744;
+  border: 1px solid #333744;
+}
+
+.logout {
+  border-radius: 50px;
+  margin-right: 8px;
+  background-color: #333744;
+  border: 1px solid #333744;
+}
+
+.logout:hover {
+  background-color: #fff;
+  color: #333744;
+  border: 1px solid #333744;
+}
+
+/* Chat Sidebar Styles */
+.group-title {
+  font-family: 'BNazanin-Bold', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  background: #2c2f3a;
+  padding: 24px;
+}
+
+.list-title {
+  font-family: 'BNazanin-Bold', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 12px 24px 0 24px;
+  margin-bottom: 4px;
+}
+
+.list-title-admin {
+  font-family: 'BNazanin', Arial, Helvetica, sans-serif;
+  color: rgb(122, 122, 122);
+  padding: 0 24px;
+}
+
+.list-title-dash {
+  font-family: 'BNazanin-Bold', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: rgb(122, 122, 122);
+  margin-top: 2em;
+  padding: 0 24px;
+}
+
+.users {
+  list-style-type: none;
+  font-size: 18px;
+  padding: 12px 24px 0 24px;
+}
+
+/* toolTip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
