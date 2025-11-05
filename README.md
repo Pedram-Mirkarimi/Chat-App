@@ -1,4 +1,4 @@
-# 💬 Chat Application v2
+# 💬 Chat Application
 A real-time chat application built with **Node.js**, **Express**, and **Socket.io**, featuring group and private messaging, user authentication, and a responsive UI powered by **EJS templates** and **vanilla JavaScript**.
 
 ---
