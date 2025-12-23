@@ -1,6 +1,6 @@
 <div align="center">
 
-# 💬 Chat App (Realtime)
+# 💬 PulseChat — Realtime Group Chat App
 
 A real-time **group chat** web application built with **Node.js**, **Express**, **Socket.io**, and **MongoDB (Mongoose)**.  
 Includes **register/login**, **JWT-based auth**, **group management**, **live messaging**, and **location sharing**.
