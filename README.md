@@ -1,118 +1,198 @@
-# 💬 Real-Time Chat Application
+<div align="center">
 
-A full-featured, real-time chat application built with **Node.js**, **Express**, and **Socket.io**. This project provides a seamless and interactive chatting experience with features like user authentication, group chats, and a responsive user interface rendered using EJS templates.
+# 💬 Chat App (Realtime)
 
----
+A real-time **group chat** web application built with **Node.js**, **Express**, **Socket.io**, and **MongoDB (Mongoose)**.  
+Includes **register/login**, **JWT-based auth**, **group management**, **live messaging**, and **location sharing**.
 
-## ✨ Key Features
+<br/>
 
-- 🔐 **User Authentication**: Secure user registration and login system using `bcryptjs` for password hashing.
-- 🚀 **Real-Time Messaging**: Instantaneous two-way communication powered by WebSockets through the **Socket.io** library.
-- 👥 **Group Chat Rooms**: Users can create new chat groups or join existing ones to communicate with multiple people simultaneously.
-- 📱 **Responsive Design**: The user interface is built with pure CSS and EJS, making it adaptable to both desktop and mobile browsers.
-- ⚙️ **Modular Architecture**: The backend code is neatly organized into models, routes, and utility modules for better maintainability and scalability.
-- 💬 **Formatted Messages**: Messages are timestamped using `moment.js` for a better user experience.
+![Node.js](https://img.shields.io/badge/Node.js-Backend-339933?logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-Web%20Server-000000?logo=express&logoColor=white)
+![Socket.io](https://img.shields.io/badge/Socket.io-Realtime-010101?logo=socketdotio&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?logo=mongodb&logoColor=white)
+![Mongoose](https://img.shields.io/badge/Mongoose-ODM-880000)
+![JWT](https://img.shields.io/badge/JWT-Auth-000000?logo=jsonwebtokens&logoColor=white)
+![EJS](https://img.shields.io/badge/EJS-Templates-A91E50)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=000)
 
----
-
-## 🛠️ Tech Stack
-
-This project utilizes the following technologies:
-
-| Category                    | Technology                    |
-| --------------------------- | ----------------------------- |
-| **Backend**                 | Node.js, Express.js           |
-| **Real-Time Communication** | Socket.io                     |
-| **Templating Engine**       | EJS (Embedded JavaScript)     |
-| **Frontend**                | HTML, CSS, Vanilla JavaScript |
-| **Authentication**          | bcryptjs                      |
-| **Utilities**               | moment.js                     |
+</div>
 
 ---
 
-## 📂 Project Structure
+## 📌 Table of Contents
+- [✨ Features](#-features)
+- [🧰 Tech Stack](#-tech-stack)
+- [📁 Project Structure](#-project-structure)
+- [🚀 Getting Started](#-getting-started)
+- [🔐 Environment Variables](#-environment-variables)
+- [🖥️ Pages](#️-pages)
+- [🧩 Realtime Events (Socket.io)](#-realtime-events-socketio)
+- [🛣️ Roadmap](#️-roadmap)
+- [🤝 Contributing](#-contributing)
+- [👤 Author](#-author)
+- [📜 License](#-license)
 
-The repository is organized as follows to ensure a clean separation of concerns:
+---
 
-```
-Chat-App/
-│
-├── app.js              # Main application entry point
-├── package.json        # Project dependencies and scripts
-│
-├── public/             # Static assets (CSS, client-side JS, images)
-│   ├── css/
-│   ├── js/
-│   └── ...
-│
-├── routes/
-│   └── route.js        # Express routes for authentication and page rendering
-│
-├── utils/              # Helper modules for managing users, groups, and messages
-│   ├── groups.js
-│   ├── messages.js
-│   └── users.js
-│
-└── views/              # EJS templates for the UI
-    ├── chat.ejs
-    ├── group.ejs
-    ├── index.ejs
-    ├── register.ejs
-    └── 404.ejs
-```
+## ✨ Features
+- 👤 **User Authentication**
+  - Register / Login
+  - Password hashing (`bcryptjs`)
+  - Token-based auth (`jsonwebtoken`) stored on client (cookie)
+- 👥 **Group Chat**
+  - Create/join group chats
+  - View group-related data
+- 💬 **Realtime Messaging**
+  - Live messages with timestamps
+  - User join/leave notifications
+- 📍 **Share Location**
+  - Send live location messages (link-based)
+- 🎨 **UI**
+  - EJS views + static assets
+  - Includes fonts/assets in `public/`
+
+---
+
+## 🧰 Tech Stack
+
+| Category | Technology |
+|---|---|
+| Backend | Node.js, Express |
+| Realtime | Socket.io |
+| Database | MongoDB |
+| ODM | Mongoose |
+| Auth/Security | JWT, bcryptjs, validator |
+| Views | EJS |
+| Config | dotenv |
+
+---
+
+## 📁 Project Structure
+
+```txt
+Chat-App-main/
+├─ app.js
+├─ models/
+│  ├─ user.js
+│  └─ group.js
+├─ routes/
+│  └─ route.js
+├─ utils/
+│  ├─ users.js
+│  ├─ groups.js
+│  └─ messages.js
+├─ views/
+│  ├─ index.ejs
+│  ├─ register.ejs
+│  ├─ group.ejs
+│  ├─ chat.ejs
+│  └─ 404.ejs
+├─ public/
+│  ├─ css/
+│  ├─ js/
+│  ├─ img/
+│  └─ fonts/
+└─ package.json
+````
 
 ---
 
 ## 🚀 Getting Started
 
-To get a local copy up and running, follow these simple steps.
+### ✅ Prerequisites
 
-### Prerequisites
+* Node.js installed
+* MongoDB running locally (or a MongoDB connection string)
 
-Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+### 📥 Install
 
-### Installation
+```bash
+npm install
+```
 
-1.  Clone the repository:
-    ```sh
-    git clone https://github.com/Pedram-Mirkarimi/Chat-App.git
-    ```
-2.  Navigate to the project directory:
-    ```sh
-    cd Chat-App
-    ```
-3.  Install NPM packages:
-    ```sh
-    npm install
-    ```
+### ▶️ Run
 
-### Running the Application
-
-Execute the following command to start the server:
-
-```sh
+```bash
 npm start
 ```
 
-The application will be available at `http://localhost:3000`.
+### 🧪 Dev Mode (auto-restart)
+
+```bash
+npm run dev
+```
 
 ---
 
-## 💡 How to Use
+## 🔐 Environment Variables
 
-1.  **Register a new account** or **log in** with existing credentials.
-2.  After logging in, you can **create a new chat group** or **join an existing one** from the list.
-3.  Start sending and receiving messages in real-time!
+This project uses `dotenv`. Create a `.env` file in the project root:
+
+```env
+PORT=3000
+MONGODB_URL=mongodb://127.0.0.1:27017/chat-app
+JWT_SECRET=yourStrongJwtSecret
+```
+
+---
+
+## 🖥️ Pages
+
+Routes are defined in `routes/route.js`:
+
+| Method | Route       | Description       |
+| -----: | ----------- | ----------------- |
+|    GET | `/`         | Home / Login page |
+|    GET | `/register` | Registration page |
+|    GET | `/group`    | Group page        |
+|    GET | `/chat`     | Chat room page    |
+|    GET | `*`         | Custom 404 page   |
 
 ---
 
-## 🔮 Future Enhancements
+## 🧩 Realtime Events (Socket.io)
 
-This project has a solid foundation that can be extended with more advanced features, such as:
+Client-side events (in `public/js/`) communicate with the server:
 
-- **Database Integration**: Persist users, messages, and groups using a database like MongoDB or PostgreSQL.
-- **Private Messaging**: Implement one-on-one private chats between users.
-- **File Sharing**: Allow users to share images and other files in the chat.
-- **User Profiles**: Add customizable user profiles with avatars and status messages.
+| Event             | Direction       | Purpose                   |
+| ----------------- | --------------- | ------------------------- |
+| `register`        | client → server | Create account            |
+| `login`           | client → server | Login and receive token   |
+| `groupName`       | client → server | Create / set group name   |
+| `joinGroup`       | client → server | Join a group              |
+| `join`            | client → server | Join chat room            |
+| `sendMessage`     | client → server | Send chat message         |
+| `sendLocation`    | client → server | Share location            |
+| `message`         | server → client | Incoming message          |
+| `locationMessage` | server → client | Incoming location message |
+| `headerData`      | server → client | Header/UI data            |
+| `groupData`       | server → client | Group related updates     |
 
 ---
+
+## 🛣️ Roadmap
+
+* [ ] Add a REST API for groups/users (optional)
+* [ ] Add message persistence in DB (store chat history)
+* [ ] Add typing indicator + read receipts
+* [ ] Add file/image sending
+* [ ] Add rate limiting + security headers (Helmet)
+* [ ] Add tests for auth & socket events
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repo
+2. Create a branch: `git checkout -b feature/your-feature`
+3. Commit: `git commit -m "Add: your feature"`
+4. Push: `git push origin feature/your-feature`
+5. Open a Pull Request
+
+---
+
+## 👤 Author
+
+**Pedram Mirkarimi**
+GitHub: [https://github.com/Pedram-Mirkarimi](https://github.com/Pedram-Mirkarimi)
