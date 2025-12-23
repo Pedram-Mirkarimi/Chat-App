@@ -31,7 +31,6 @@ Includes **register/login**, **JWT-based auth**, **group management**, **live me
 - [🛣️ Roadmap](#️-roadmap)
 - [🤝 Contributing](#-contributing)
 - [👤 Author](#-author)
-- [📜 License](#-license)
 
 ---
 
