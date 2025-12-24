@@ -70,7 +70,7 @@ Includes **register/login**, **JWT-based auth**, **group management**, **live me
 ## 📁 Project Structure
 
 ```txt
-Chat-App-main/
+pulsechat/
 ├─ app.js
 ├─ models/
 │  ├─ user.js
