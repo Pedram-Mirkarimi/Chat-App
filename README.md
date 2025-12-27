@@ -40,7 +40,7 @@ Focus: clean structure, easy setup, and core functionality.
 ### Install
 ```bash
 npm install
-````
+```
 
 ### Environment variables
 
@@ -102,4 +102,5 @@ This project uses basic Socket.io events for:
 ## Author
 
 Seyed AmirMohammad Mirkarimi
+</br>
 GitHub: [https://github.com/Pedram-Mirkarimi](https://github.com/Pedram-Mirkarimi)
