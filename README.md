@@ -101,5 +101,4 @@ This project uses basic Socket.io events for:
 
 ## Author
 
-Author: Seyed AmirMohammad Mirkarimi
-GitHub: https://github.com/Pedram-Mirkarimi
+Seyed AmirMohammad Mirkarimi
