@@ -1,7 +1,7 @@
 # pulsechat — Realtime Chat (Learning Project)
 
 > **Learning / practice project (Lern-/Übungsprojekt).**  
-> Built to strengthen my fundamentals for an **Ausbildung as Fachinformatiker/in für Anwendungsentwicklung (FIAE)** (start: **from 08/2026**).
+> Built to strengthen my fundamentals for an **Ausbildung as Fachinformatiker/in für Anwendungsentwicklung (FIAE)** (Start: **ab 08/2026**).
 
 A simple realtime group chat web app to practice **Node.js**, **Express**, **Socket.io**, and **MongoDB**.
 Focus: clean structure, easy setup, and core functionality.
@@ -48,8 +48,8 @@ Create a `.env` file in the project root:
 
 ```env
 PORT=3000
-MONGODB_URL=mongodb://127.0.0.1:27017/chat-app
-JWT_SECRET=yourStrongJwtSecret
+MONGODB_URL=mongodb://127.0.0.1:27017/pulsechat
+JWT_SECRET=change_me
 ```
 
 ### Run
@@ -101,5 +101,5 @@ This project uses basic Socket.io events for:
 
 ## Author
 
-Seyed AmirMohammad Mirkarimi
-GitHub: [https://github.com/Pedram-Mirkarimi](https://github.com/Pedram-Mirkarimi)
+Author: Seyed AmirMohammad Mirkarimi
+GitHub: https://github.com/Pedram-Mirkarimi
