@@ -103,4 +103,4 @@ This project uses basic Socket.io events for:
 
 Seyed AmirMohammad Mirkarimi
 </br>
-GitHub: [https://github.com/Pedram-Mirkarimi](https://github.com/Pedram-Mirkarimi)
+GitHub: https://github.com/S-AmirMohammad-Mirkarimi
